@@ -15,7 +15,13 @@ gecko.zip
 
 # Local diagnostics and captures
 out/
-shots/
+shots/*
+# ... except the five screenshots the README embeds, which have to resolve on GitHub.
+!shots/settings.png
+!shots/page.png
+!shots/gecko.png
+!shots/ya.png
+!shots/max.png
 *.log
 *.txt
 !README.md
