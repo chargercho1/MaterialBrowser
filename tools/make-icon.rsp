@@ -1,0 +1,7 @@
+/nologo
+/out:makeicon.exe
+/target:exe
+/platform:x64
+/reference:C:\Windows\Microsoft.NET\Framework64\v4.0.30319\System.Drawing.dll
+/reference:C:\Windows\Microsoft.NET\Framework64\v4.0.30319\System.dll
+MakeIcon.cs

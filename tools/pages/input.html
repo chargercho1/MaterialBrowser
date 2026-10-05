@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MaterialBrowser input probe</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #fff; }
+  /* The field covers the whole viewport, so any click inside the page area
+     lands in it - the harness does not need exact coordinates. */
+  #field {
+    position: fixed; left: 0; top: 0; right: 0; bottom: 0;
+    width: 100%; height: 100%;
+    font: 40px/1.4 monospace; padding: 20px; border: 0; outline: 0;
+    background: #ffffff; color: #101018; box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+<input id="field" autocomplete="off" autofocus>
+<script>
+  var field = document.getElementById('field');
+  function report() {
+    var value = field.value;
+    try {
+      var img = new Image();
+      img.src = 'http://127.0.0.1:8799/report?len=' + value.length +
+                '&text=' + encodeURIComponent(value.slice(0, 200));
+    } catch (e) {}
+  }
+  field.addEventListener('input', report);
+  field.addEventListener('keyup', report);
+  setTimeout(report, 50);
+</script>
+</body>
+</html>

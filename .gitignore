@@ -1,0 +1,28 @@
+# Build output
+*.exe
+*.dll
+*.pdb
+*.obj
+*.ilk
+*.resources
+
+# The Firefox runtime is a third-party build (MPL/GPL) and far above GitHub's
+# 100 MB per-file limit. MaterialBrowser needs it in gecko\ at runtime; it is
+# installed separately, see the README.
+gecko/
+gecko.zip
+*.zip
+
+# Local diagnostics and captures
+out/
+shots/
+*.log
+*.txt
+!README.md
+
+# Editor / OS noise
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

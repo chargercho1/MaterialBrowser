@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Material Browser — проверка вёрстки</title>
+  <style>
+    body { font-family: "Segoe UI", sans-serif; margin: 24px; background: #ffffff; color: #1f1f24; }
+    h1 { color: #6750a4; font-size: 30px; margin-bottom: 4px; }
+    h2 { font-size: 20px; color: #00695c; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    .card { background: #f3f0ff; border-radius: 12px; padding: 16px; margin: 16px 0; width: 620px; }
+    .wide { width: 640px; }
+    li { color: #333; }
+    table { border-spacing: 0px; }
+    td, th { background: #eef3ff; padding: 8px 12px; }
+    a { color: #1a73e8; }
+    .tag { background: #ffd8e4; border-radius: 8px; padding: 4px 10px; width: 220px; }
+  </style>
+</head>
+<body>
+  <h1>Material Browser</h1>
+  <p class="wide">Это проверочная страница для встроенного движка. Она содержит заголовки, абзацы,
+  списки, таблицу, ссылку, поле ввода и оформление через CSS — всё то, что должно отрисовываться
+  собственным рендерером без системного WebBrowser.</p>
+
+  <div class="card">
+    <strong>Карточка с фоном</strong>
+    <p class="wide">Текст внутри блока с собственной шириной, чтобы проверить перенос строк
+    и расчёт высоты блочной вёрстки при ограниченной ширине контейнера.</p>
+    <ul>
+      <li>Первый пункт списка</li>
+      <li>Второй пункт списка</li>
+      <li>Третий пункт списка</li>
+    </ul>
+  </div>
+
+  <h2>Таблица</h2>
+  <table>
+    <tr><th>Поисковик</th><th>Адрес</th></tr>
+    <tr><td>Google</td><td>google.com</td></tr>
+    <tr><td>Яндекс</td><td>yandex.ru</td></tr>
+    <tr><td>DuckDuckGo</td><td>duckduckgo.com</td></tr>
+  </table>
+
+  <h2>Элементы формы</h2>
+  <p class="tag">Поле: <input type="text" value="пример"></p>
+  <p><a href="https://ru.wikipedia.org/wiki/Материал">Ссылка на статью</a></p>
+</body>
+</html>
